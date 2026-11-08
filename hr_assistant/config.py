@@ -57,12 +57,7 @@ ALLOWED_EMPLOYEE_EMAILS = {
 # All four are env-overridable so a model swap needs no code change — set
 # the variable in .env (local) or the Cloud Run service config (deployed).
 
-# gemini-2.5-flash is GA but scheduled for retirement ~2026-10-20 (verified
-# Sept 2026). Migrate to a Gemini 3.x Flash model before then — just set
-# LLM_MODEL_NAME (no code change; hr_assistant/llm.py prefixes it with
-# "vertex_ai/"). Current IDs:
-# https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions
-LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gemini-2.5-flash")
+LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gemini-3.8-flash")
 
 # Fallback model — served by Groq if the Vertex Gemini call errors (see
 # hr_assistant/llm.py's LiteLLM Router). llm.py prefixes this with "groq/".

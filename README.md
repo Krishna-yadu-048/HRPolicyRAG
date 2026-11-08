@@ -53,4 +53,4 @@ Read `docs/` in order:
 
 **Troubleshooting** — [17 Troubleshooting](docs/17-troubleshooting.md) (every error hit during build + deploy, and its fix)
 
-**Reference** — [commands.md](commands.md) — every command from project creation to teardown, with real values.
+**Reference** — commands folder — every command from project creation to teardown, with real values.
